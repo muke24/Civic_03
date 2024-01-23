@@ -1,0 +1,400 @@
+fileFormatVersion: 2
+guid: 6d1dffa7467b551499c6c52c0d9289c9
+ModelImporter:
+  serializedVersion: 26
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Black_Gloss.001
+    second: {fileID: 2100000, guid: 54ce63bb823e39347b7e125bfac7096a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Black_Gloss.002
+    second: {fileID: 2100000, guid: 2fabb6114a35cc643a81e28e2f0643a7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Black_Gloss.003
+    second: {fileID: 2100000, guid: 109c9cb5fc1391141ad752b08318f8ec, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Black_Gloss.004
+    second: {fileID: 2100000, guid: 7fd2e51a3e5746543aec3d1d0e04c79c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Black_Gloss.005
+    second: {fileID: 2100000, guid: 462a29a0fb41b9f4e966b151059ddf16, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Black_Gloss.006
+    second: {fileID: 2100000, guid: 6f025f9fa6086834ca0d9ce2b1862ac6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Body.001
+    second: {fileID: 2100000, guid: f0dc94823caf57c458b51a4063fd3a1a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BrakeLights.001
+    second: {fileID: 2100000, guid: 4acc93d6564c6bb43acc7b58a1240529, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BrakeTrim.001
+    second: {fileID: 2100000, guid: 38063a43cbf63b74390f03a9bfbedc05, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BumperBrakeLights.001
+    second: {fileID: 2100000, guid: f36e5c9f080a7e040bea87e8e5bd6c0e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BumperBrakeLights_1.001
+    second: {fileID: 2100000, guid: b2c3dd9fe9cde9048bc0120fb5451a2c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DRLBrakeLight.001
+    second: {fileID: 2100000, guid: b0adf0cbae357574592f9f158f1bf1bb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DefaultHDMaterial.001
+    second: {fileID: 2100000, guid: 93292a2a666f6fb46831ad8763842ad1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Emblem.001
+    second: {fileID: 2100000, guid: 055df7124e6bd004ba6dad18d4a81eac, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ExhaustHole.001
+    second: {fileID: 2100000, guid: 83542d68ebd7f544ca989e38aa2b00f1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FK8_Badge.001
+    second: {fileID: 2100000, guid: 12149d9bf1602b44d934aa5a622a3a55, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FK8_BlackGloss.001
+    second: {fileID: 2100000, guid: 4b9eda62a34cdeb4a9c537ac87be79fb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FK8_BlackMatt.001
+    second: {fileID: 2100000, guid: 4dba776d11725f24ebaf48bd9e5bcffa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FK8_BrakeDisc.001
+    second: {fileID: 2100000, guid: 05b43335527f3fb40bd1bf04e555fb8e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FK8_Brown.001
+    second: {fileID: 2100000, guid: 61ea5dc352146744781a7367511db470, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FK8_Chrome.001
+    second: {fileID: 2100000, guid: 6d0129d72488aaa46ba7528a36b10d25, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FK8_Chrome_1.001
+    second: {fileID: 2100000, guid: a3da3772ba3f5ad44a3107ae32d5eee9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FK8_Engine.001
+    second: {fileID: 2100000, guid: d2e4a9d1c5636d845b521eb8eaefa1e7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FK8_Grille.001
+    second: {fileID: 2100000, guid: 93275391c9d6df545920a1c5042ad228, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FK8_Headlight.001
+    second: {fileID: 2100000, guid: c240b6eee2624f344bbe349a92f33b0d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FK8_HighBeam.001
+    second: {fileID: 2100000, guid: d1808199b51058b49ae4f37a2dc13f65, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FK8_Red.001
+    second: {fileID: 2100000, guid: 30c1287c94cc1e7478cbc66a59c01a1f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FK8_RedGloss.001
+    second: {fileID: 2100000, guid: be001de74e15b4441949c97109e5396c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FK8_Tire.001
+    second: {fileID: 2100000, guid: fca79794f4b1dc344b136d62de5bdb6d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GlassDriversWindow.001
+    second: {fileID: 2100000, guid: 19125f5540e524e4cb072038a5e42c7c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GlassSideWindows.001
+    second: {fileID: 2100000, guid: 89c55aff0426bb444908b2109c5f52b5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GlassSideWindows_1.001
+    second: {fileID: 2100000, guid: 985b42a51252daf4e811daa1b597857f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: HeadlightsDRL.001
+    second: {fileID: 2100000, guid: 779ab72bff499dd4c93c6afe263d33ef, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: IndicatorsBackOff.001
+    second: {fileID: 2100000, guid: fddbd4f8d6c5cde4997d38b77f8994d0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Invis.001
+    second: {fileID: 2100000, guid: 1aed3faf0d8905444b63954f47ffbdb4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mirror.001
+    second: {fileID: 2100000, guid: 8bfcab1308c1a0e40b82a6aac80114a7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pin_Stripes.001
+    second: {fileID: 2100000, guid: 3b274e5c83b95a248bd53ff1190d7a22, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pin_Stripes.002
+    second: {fileID: 2100000, guid: e582cd5ba81836d41871ec3950ab688b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pin_Stripes.003
+    second: {fileID: 2100000, guid: d5f428f5ff318d543af48cf7c15e7e66, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pin_Stripes.004
+    second: {fileID: 2100000, guid: d9fc157bde888224b82eae7a18d6846e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pin_Stripes.005
+    second: {fileID: 2100000, guid: 2da4f78831dda3041be04a7845f0a1a1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pin_Stripes.006
+    second: {fileID: 2100000, guid: bd3d2b3818ffbec4d91957c65838c3c3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rear_Lights.001
+    second: {fileID: 2100000, guid: 87baadb5f388d7d41932db4695d13fbb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RedEmblem.001
+    second: {fileID: 2100000, guid: 6e8f5e48abbecad4a80a3307bf957e5d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ReverseOff.001
+    second: {fileID: 2100000, guid: 8789a1176bb793d4792335679f36217f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WindowTrim.001
+    second: {fileID: 2100000, guid: 5424a103d5798f64d96f65d1ea0557df, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: black.001
+    second: {fileID: 2100000, guid: dcc5f3c97dc680d468d2ef2127151c5c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: black_m.001
+    second: {fileID: 2100000, guid: 3feb7ead4df56ff46a1ddaa1fb483eaf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: body.001
+    second: {fileID: 2100000, guid: e87bface990552f4f862783f49229e54, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: chrome.001
+    second: {fileID: 2100000, guid: f88a42f1be17c62498b7bea80a303614, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: console.001
+    second: {fileID: 2100000, guid: 1e6e8131af0a9be46852e011511c75bb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: console_center.001
+    second: {fileID: 2100000, guid: c68efcd9003c4e94dadb652b34b06827, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: d_red.001
+    second: {fileID: 2100000, guid: 310c59468312cc04cb25fa29dd5aef7f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: glass.001
+    second: {fileID: 2100000, guid: 89397f0ca7d6a0449895d03eabe7e961, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: glass_1.001
+    second: {fileID: 2100000, guid: 3bd4f23a12c882b47af2615024e80d76, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: gum.001
+    second: {fileID: 2100000, guid: f7596071447023849bcdcaaf7e861a5c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: interior.001
+    second: {fileID: 2100000, guid: 2be71a0357e157f4a80ad71996642fd9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: o_glass.001
+    second: {fileID: 2100000, guid: 44235eb43e078cc4eaf600569e425f05, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: orange.001
+    second: {fileID: 2100000, guid: 32d51fa6a0b48554eac417630ea203fe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: red.001
+    second: {fileID: 2100000, guid: a043a66ddc25ad141b63bd14418fae88, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: silver.001
+    second: {fileID: 2100000, guid: eac374656cadbef4d8d6888e4a829e60, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 165
+    normalImportMode: 1
+    tangentImportMode: 3
+    normalCalculationMode: 1
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 2
+  referencedClips: []
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
