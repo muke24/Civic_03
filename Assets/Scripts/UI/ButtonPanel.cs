@@ -42,22 +42,22 @@ public class ButtonPanel : MonoBehaviour
 
 	public void OnHomePress()
 	{
-		OnButtonPress(0);
+		OnButtonPress(CurrentPage.Home);
 	}
 
 	public void OnLightingPress()
 	{
-		OnButtonPress(1);
+		OnButtonPress(CurrentPage.Lighting);
 	}
 
 	public void OnVehiclePress()
 	{
-		OnButtonPress(2);
+		OnButtonPress(CurrentPage.Settings);
 	}
 
-	private void OnButtonPress(int page)
+	private void OnButtonPress(CurrentPage page)
 	{
-		CurrentPage newPage = (CurrentPage)page;
+		CurrentPage newPage = page;
 		if (currentPage != newPage)
 		{
 			currentPage = newPage;

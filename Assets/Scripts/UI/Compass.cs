@@ -1,34 +1,37 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class Compass : MonoBehaviour
 {
-	//[SerializeField]
-	//private RectTransform compassBarTransform;
-
-	//[SerializeField]
-	//private RectTransform policeMarkerTransform;
-	//[SerializeField]
-	//private RectTransform northMarkerTransform;
-	//[SerializeField]
-	//private RectTransform southMarkerTransform;
-
-	//[SerializeField]
-	//private Transform cameraTransform;
-	//[SerializeField]
-	//private Transform policeObjectTransform;
 	[SerializeField]
 	private Transform cameraPivot;
-
 	[SerializeField]
-	private RawImage compassScrollTexture;
+	private Image compassImage;
+
+	private Material compassMaterial;
+
+	void Start()
+	{
+		// Ensure there's a material attached to the compass image
+		if (compassImage.material != null)
+		{
+			compassMaterial = compassImage.material;
+		}
+		else
+		{
+			Debug.LogError("No material found on compass image");
+		}
+	}
 
 	void Update()
 	{
-		float rot = Input.compass.trueHeading + cameraPivot.rotation.eulerAngles.y;
+		if (compassMaterial != null)
+		{
+			float rot = Input.compass.trueHeading + cameraPivot.rotation.eulerAngles.y;
 
-		compassScrollTexture.uvRect = new Rect(rot / 360f, 0, 1, 1);
+			// Adjust the material's texture offset to rotate the compass
+			Vector2 offset = new Vector2(rot / 360f, 0);
+			compassMaterial.mainTextureOffset = offset;
+		}
 	}
 }

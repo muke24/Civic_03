@@ -3,11 +3,15 @@ using UnityEngine.UI;
 
 public class Plate : MonoBehaviour
 {
-    public string plate = "LAPTOP";
-    public string state = "NSW";
+	[SerializeField]
+	private string plate = "LAPTOP";
+	[SerializeField]
+	private string state = "NSW";
 
-    public Color backgroundColour;
-    public Color textColour;
+	[SerializeField]
+	private Color backgroundColour;
+	[SerializeField]
+	private Color textColour;
 
     [SerializeField]
     private Material backgroundMaterial;
@@ -19,7 +23,7 @@ public class Plate : MonoBehaviour
 	private Text stateText;
 
 	// Start is called before the first frame update
-	void Start()
+	void Awake()
     {
         ApplyToPlate();
 	}
