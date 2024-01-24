@@ -67,11 +67,18 @@ public class ButtonPanel : MonoBehaviour
 
 	private void MoveHighlightToPage(CurrentPage page)
 	{
+		int pageIndex = (int)page;
+		if (pageIndex < 0 || pageIndex >= buttonPositions.Length)
+		{
+			Debug.LogError("Page index is out of range: " + pageIndex);
+			return;
+		}
+
 		if (highlightCoroutine != null)
 		{
 			StopCoroutine(highlightCoroutine);
 		}
-		highlightCoroutine = StartCoroutine(MoveHighlight(buttonPositions[(int)page]));
+		highlightCoroutine = StartCoroutine(MoveHighlight(buttonPositions[pageIndex]));
 	}
 
 	private IEnumerator MoveHighlight(Vector3 position)
@@ -102,7 +109,7 @@ public class ButtonPanel : MonoBehaviour
 
 	private static float SineTableLookup(float index)
 	{
-		int i = Mathf.Abs((int)index % sineTableSize);
+		int i = Mathf.Clamp((int)index, 0, sineTableSize - 1);
 		return sineTable[i];
 	}
 }
