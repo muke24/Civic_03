@@ -9,17 +9,10 @@ public class ButtonPanel : MonoBehaviour
 	private Vector2[] buttonPositions;
 	[SerializeField]
 	private RectTransform highlightTransform;
-
 	[SerializeField]
 	private RectTransform[] highlightedTexts;
-	[SerializeField]
-	private Vector2 multiplier;
-	private bool isMoving;
 
-	//void Awake()
-	//{
-	//	highlightTransform.anchoredPosition = buttonPositions[0];
-	//}
+	private bool isMoving;
 
 	public void Home()
 	{
@@ -50,15 +43,18 @@ public class ButtonPanel : MonoBehaviour
 
 		while (Vector2.Distance(highlightTransform.anchoredPosition, targetPosition) > 0.01f)
 		{
+			// Animate the highlight
 			highlightTransform.anchoredPosition = Vector2.Lerp(highlightTransform.anchoredPosition, targetPosition, moveSpeed * Time.deltaTime);
+			// Keep the highlight texts in place
 			for (int i = 0; i < highlightedTexts.Length; i++)
 			{
-				highlightedTexts[i].anchoredPosition = buttonPositions[i] * multiplier;
+				highlightedTexts[i].anchoredPosition = buttonPositions[i] - highlightTransform.anchoredPosition;
 			}
 			yield return null;
 		}
 
 		highlightTransform.anchoredPosition = targetPosition; // Ensure it's exactly at the target position
+
 		isMoving = false;
 	}
 }

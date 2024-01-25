@@ -6,32 +6,30 @@ public class Compass : MonoBehaviour
 	[SerializeField]
 	private Transform cameraPivot;
 	[SerializeField]
-	private Image compassImage;
-
-	private Material compassMaterial;
-
-	void Start()
-	{
-		// Ensure there's a material attached to the compass image
-		if (compassImage.material != null)
-		{
-			compassMaterial = compassImage.material;
-		}
-		else
-		{
-			Debug.LogError("No material found on compass image");
-		}
-	}
+	private Image[] compassImages; // Array of 3 images
 
 	void Update()
 	{
-		if (compassMaterial != null)
-		{
-			float rot = Input.compass.trueHeading + cameraPivot.rotation.eulerAngles.y;
+		float rot = Input.compass.trueHeading + cameraPivot.rotation.eulerAngles.y;
+		float offset = rot / 360f * 2500; // Calculate offset for images
 
-			// Adjust the material's texture offset to rotate the compass
-			Vector2 offset = new Vector2(rot / 360f, 0);
-			compassMaterial.mainTextureOffset = offset;
+		for (int i = 0; i < 3; i++)
+		{
+			// Move each image
+			Vector3 position = compassImages[i].transform.localPosition;
+			position.x = i * 2500 - offset;
+
+			// Check if the image has moved off-screen and reposition it
+			if (position.x < -2500)
+			{
+				position.x += 2500 * 3;
+			}
+			else if (position.x > 2500 * 2)
+			{
+				position.x -= 2500 * 3;
+			}
+
+			compassImages[i].transform.localPosition = position;
 		}
 	}
 }
