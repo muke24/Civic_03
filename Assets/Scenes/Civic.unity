@@ -11289,31 +11289,6 @@ MonoBehaviour:
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: VEHICLE
---- !u!114 &1646293608702903352
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1646293608702903355}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce7f70ab950acbc499fa27a427557ae3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  texts:
-  - {fileID: 1646293610045808583}
-  - {fileID: 1646293608723111581}
-  - {fileID: 1646293608723111577}
-  unhighlightedTexts:
-  - {fileID: 1646293609645158747}
-  - {fileID: 1646293609433529704}
-  - {fileID: 1646293609006597451}
-  positions:
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  buttonPressed: 1
 --- !u!1 &1646293608702903353
 GameObject:
   m_ObjectHideFlags: 0
@@ -11345,7 +11320,6 @@ GameObject:
   - component: {fileID: 1646293608692184921}
   - component: {fileID: 1646293608692184923}
   - component: {fileID: 1646293608702903358}
-  - component: {fileID: 1646293608702903352}
   m_Layer: 5
   m_Name: ButtonHighlight
   m_TagString: Untagged
@@ -12041,7 +12015,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1646293609372391810}
-        m_MethodName: OnVehiclePress
+        m_MethodName: Vehicle
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12799,15 +12773,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a02bdded015bf747b674de090388135, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sizeMultiplier: 1
-  sizeTime: 0.45
-  backplier: -7.82
-  forplier: 217.9
-  buttonHighlight: {fileID: 1646293608723111579}
+  moveSpeed: 10
   buttonPositions:
-  - {x: 150, y: 22.25, z: 0}
-  - {x: 400, y: 22.25, z: 0}
-  - {x: 650, y: 22.25, z: 0}
+  - {x: -400, y: 0}
+  - {x: 0, y: 0}
+  - {x: 400, y: 0}
+  highlightTransform: {fileID: 1646293608723111579}
+  highlightedTexts:
+  - {fileID: 1646293610045808583}
+  - {fileID: 1646293608723111581}
+  - {fileID: 1646293608723111577}
+  multiplier: {x: 0, y: 0}
 --- !u!1 &1646293609415656981
 GameObject:
   m_ObjectHideFlags: 0
@@ -13032,7 +13008,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1646293609372391810}
-        m_MethodName: OnLightingPress
+        m_MethodName: Lighting
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -13548,7 +13524,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1646293609372391810}
-        m_MethodName: OnHomePress
+        m_MethodName: Home
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -28342,7 +28318,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: bcb3ca429643f6440aac4a5ced025c35, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -28359,7 +28335,7 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6907021910977093370}
-  m_CullTransparentMesh: 0
+  m_CullTransparentMesh: 1
 --- !u!114 &6907021910977093366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28374,7 +28350,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []

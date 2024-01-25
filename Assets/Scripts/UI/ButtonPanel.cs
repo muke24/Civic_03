@@ -4,112 +4,61 @@ using UnityEngine;
 public class ButtonPanel : MonoBehaviour
 {
 	[SerializeField]
-	private float sizeMultiplier = 2f;
+	private float moveSpeed;
 	[SerializeField]
-	private float sizeTime = 1f;
+	private Vector2[] buttonPositions;
 	[SerializeField]
-	private float backplier = 1f; // Backwards multiplier
-	[SerializeField]
-	private float forplier = 1f; // Forwards multiplier
-
-	private enum CurrentPage { Home, Lighting, Settings }
-	private CurrentPage currentPage = CurrentPage.Home;
+	private RectTransform highlightTransform;
 
 	[SerializeField]
-	private RectTransform buttonHighlight;
+	private RectTransform[] highlightedTexts;
 	[SerializeField]
-	private Vector3[] buttonPositions;
+	private Vector2 multiplier;
+	private bool isMoving;
 
-	private Coroutine highlightCoroutine;
-	private Vector2 originalHighlightSize;
+	//void Awake()
+	//{
+	//	highlightTransform.anchoredPosition = buttonPositions[0];
+	//}
 
-	private static readonly float[] sineTable;
-	private static readonly int sineTableSize = 1000;
-
-	static ButtonPanel()
+	public void Home()
 	{
-		sineTable = new float[sineTableSize];
-		for (int i = 0; i < sineTableSize; i++)
+		MoveHighlight(0);
+	}
+
+	public void Lighting()
+	{
+		MoveHighlight(1);
+	}
+
+	public void Vehicle()
+	{
+		MoveHighlight(2);
+	}
+
+	void MoveHighlight(int i)
+	{
+		if (!isMoving)
 		{
-			sineTable[i] = Mathf.Sin(i * Mathf.PI * 2 / sineTableSize);
+			StartCoroutine(LerpHighlight(buttonPositions[i]));
 		}
 	}
 
-	void Start()
+	IEnumerator LerpHighlight(Vector2 targetPosition)
 	{
-		originalHighlightSize = buttonHighlight.sizeDelta;
-	}
+		isMoving = true;
 
-	public void OnHomePress()
-	{
-		OnButtonPress(CurrentPage.Home);
-	}
-
-	public void OnLightingPress()
-	{
-		OnButtonPress(CurrentPage.Lighting);
-	}
-
-	public void OnVehiclePress()
-	{
-		OnButtonPress(CurrentPage.Settings);
-	}
-
-	private void OnButtonPress(CurrentPage page)
-	{
-		CurrentPage newPage = page;
-		if (currentPage != newPage)
+		while (Vector2.Distance(highlightTransform.anchoredPosition, targetPosition) > 0.01f)
 		{
-			currentPage = newPage;
-			MoveHighlightToPage(newPage);
-		}
-	}
-
-	private void MoveHighlightToPage(CurrentPage page)
-	{
-		int pageIndex = (int)page;
-		if (pageIndex < 0 || pageIndex >= buttonPositions.Length)
-		{
-			Debug.LogError("Page index is out of range: " + pageIndex);
-			return;
-		}
-
-		if (highlightCoroutine != null)
-		{
-			StopCoroutine(highlightCoroutine);
-		}
-		highlightCoroutine = StartCoroutine(MoveHighlight(buttonPositions[pageIndex]));
-	}
-
-	private IEnumerator MoveHighlight(Vector3 position)
-	{
-		Vector3 startPosition = buttonHighlight.position;
-		float timeElapsed = 0f;
-
-		while (timeElapsed < sizeTime)
-		{
-			float progress = timeElapsed / sizeTime;
-			buttonHighlight.position = CustomLerp(startPosition, position, progress);
-
-			float scale = SineTableLookup(progress * sineTableSize) * (progress < 0.5f ? forplier : backplier);
-			buttonHighlight.sizeDelta = originalHighlightSize + new Vector2(scale * sizeMultiplier, 0);
-
-			timeElapsed += Time.deltaTime;
+			highlightTransform.anchoredPosition = Vector2.Lerp(highlightTransform.anchoredPosition, targetPosition, moveSpeed * Time.deltaTime);
+			for (int i = 0; i < highlightedTexts.Length; i++)
+			{
+				highlightedTexts[i].anchoredPosition = buttonPositions[i] * multiplier;
+			}
 			yield return null;
 		}
 
-		buttonHighlight.position = position;
-		buttonHighlight.sizeDelta = originalHighlightSize;
-	}
-
-	private static Vector3 CustomLerp(Vector3 a, Vector3 b, float t)
-	{
-		return new Vector3(a.x + (b.x - a.x) * t, a.y + (b.y - a.y) * t, a.z + (b.z - a.z) * t);
-	}
-
-	private static float SineTableLookup(float index)
-	{
-		int i = Mathf.Clamp((int)index, 0, sineTableSize - 1);
-		return sineTable[i];
+		highlightTransform.anchoredPosition = targetPosition; // Ensure it's exactly at the target position
+		isMoving = false;
 	}
 }
