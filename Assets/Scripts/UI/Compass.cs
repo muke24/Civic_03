@@ -8,6 +8,12 @@ public class Compass : MonoBehaviour
 	[SerializeField]
 	private Image[] compassImages; // Array of 3 images
 
+	void Start()
+	{
+		Input.location.Start();
+		Input.compass.enabled = true;
+	}
+
 	void Update()
 	{
 		float rot = Input.compass.trueHeading + cameraPivot.rotation.eulerAngles.y;

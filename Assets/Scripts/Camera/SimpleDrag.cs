@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SimpleDrag : MonoBehaviour
@@ -26,7 +25,7 @@ public class SimpleDrag : MonoBehaviour
 	private void Awake()
 	{
 		m_camera = Camera.main;
-		startRot = transform.rotation.eulerAngles;
+		startRot = transform.rotation.eulerAngles;	
 	}
 
 	private void Update()
