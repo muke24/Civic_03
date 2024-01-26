@@ -14,6 +14,23 @@ public class ButtonPanel : MonoBehaviour
 
 	private bool isMoving;
 
+	public int curPage = 0;
+
+	public static ButtonPanel instance { get; private set; }
+	private void Awake()
+	{
+		// If there is an instance, and it's not me, delete myself.
+
+		if (instance != null && instance != this)
+		{
+			Destroy(this);
+		}
+		else
+		{
+			instance = this;
+		}
+	}
+
 	public void Home()
 	{
 		MoveHighlight(0);
@@ -22,15 +39,21 @@ public class ButtonPanel : MonoBehaviour
 	public void Lighting()
 	{
 		MoveHighlight(1);
+
+		InfoPanel.instance.CreateMsg(new Message(InfoPanel.instance.lightingIcon, "Lighting", "Lighting services unavailable!"));
 	}
 
 	public void Vehicle()
 	{
 		MoveHighlight(2);
+
+		InfoPanel.instance.CreateMsg(new Message(InfoPanel.instance.vehicleIcon, "Vehicle", "Vehicle services unavailable!"));
+
 	}
 
 	void MoveHighlight(int i)
 	{
+		curPage = i;
 		if (!isMoving)
 		{
 			StartCoroutine(LerpHighlight(buttonPositions[i]));
