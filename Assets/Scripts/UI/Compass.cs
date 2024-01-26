@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class Compass : MonoBehaviour
@@ -7,6 +8,10 @@ public class Compass : MonoBehaviour
 	private Transform cameraPivot;
 	[SerializeField]
 	private Image[] compassImages; // Array of 3 images
+	[SerializeField]
+	private float compassSmoothing = 0.5f;
+
+	private float m_lastMagneticHeading = 0f;
 
 	void Start()
 	{
@@ -16,7 +21,14 @@ public class Compass : MonoBehaviour
 
 	void Update()
 	{
-		float rot = Input.compass.trueHeading + cameraPivot.rotation.eulerAngles.y;
+		//do rotation based on compass
+		float currentMagneticHeading = (float)Math.Round(Input.compass.magneticHeading, 2);
+		if (m_lastMagneticHeading < currentMagneticHeading - compassSmoothing || m_lastMagneticHeading > currentMagneticHeading + compassSmoothing)
+		{
+			m_lastMagneticHeading = currentMagneticHeading;
+		}
+
+		float rot = m_lastMagneticHeading + cameraPivot.rotation.eulerAngles.y;
 		float offset = rot / 360f * 2500; // Calculate offset for images
 
 		for (int i = 0; i < 3; i++)
