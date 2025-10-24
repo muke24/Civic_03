@@ -17,4 +17,8 @@ Keep in mind that you can rotate the camera by dragging the screen, this will ch
 
 ------------------------------
 
+Data Source Warning: This software currently uses a reverse-engineered, non-public Waze URL. This method is fragile and likely violates Waze's Terms of Service. The URL is currently working for this Unity project. All code is provided under the MIT license."
+
+------------------------------
+
 <img width="1917" height="1031" alt="image" src="https://github.com/user-attachments/assets/0f4e6d6a-4c01-4366-badf-b51e2456e561" />
