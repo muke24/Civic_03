@@ -95,6 +95,9 @@ MonoBehaviour:
   - {fileID: 3891086925131603549}
   - {fileID: 7648591165233901623}
   - {fileID: 7648591166333360770}
+  compassSmoothing: 0.5
+  compassAvailImg: {fileID: 0}
+  gyroAvailImg: {fileID: 0}
 --- !u!114 &3891086924455669309
 MonoBehaviour:
   m_ObjectHideFlags: 0

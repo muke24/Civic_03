@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.Android;
 using UnityEngine.UI;
 
 public class Compass : MonoBehaviour
@@ -13,16 +14,30 @@ public class Compass : MonoBehaviour
 
 	private float m_lastMagneticHeading = 0f;
 
+	[SerializeField]
+	private Image compassAvailImg;
+	[SerializeField]
+	private Image gyroAvailImg;
+
 	void Start()
 	{
+		Permission.RequestUserPermission(Permission.FineLocation);
+		Permission.RequestUserPermission(Permission.CoarseLocation);
+
 		Input.location.Start();
 		Input.compass.enabled = true;
+
+		gyroAvailImg.color = SystemInfo.supportsGyroscope ? Color.green : Color.red;
+		compassAvailImg.color = Input.compass.enabled ? Color.green : Color.red;
+
+		//Debug.Log("Gryo On: " + SystemInfo.supportsGyroscope);
+		//Debug.Log("Compass On: " + Input.compass.enabled);
 	}
 
 	void Update()
 	{
 		//do rotation based on compass
-		float currentMagneticHeading = (float)Math.Round(Input.compass.magneticHeading, 2);
+		float currentMagneticHeading = (float)Math.Round(AlertReciever.Instance.CurrentDirection, 2);
 		if (m_lastMagneticHeading < currentMagneticHeading - compassSmoothing || m_lastMagneticHeading > currentMagneticHeading + compassSmoothing)
 		{
 			m_lastMagneticHeading = currentMagneticHeading;

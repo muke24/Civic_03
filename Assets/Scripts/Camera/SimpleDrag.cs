@@ -100,4 +100,5 @@ public class SimpleDrag : MonoBehaviour
 		}
 		animatingBack = false;
 	}
+
 }
