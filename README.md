@@ -14,6 +14,8 @@ To use the police / alert detector:
 
 Keep in mind that you can rotate the camera by dragging the screen, this will change the offset direction that the arrow will point at if there is an Alert.
 
+Unity 2019.2.21f1 is used as it was the newest version that would work on my Android 4.2 headunit.
+
 ------------------------------
 
 <img width="1917" height="1031" alt="image" src="https://github.com/user-attachments/assets/0f4e6d6a-4c01-4366-badf-b51e2456e561" />
