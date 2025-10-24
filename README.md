@@ -10,7 +10,7 @@ To use the police / alert detector:
 - 1: Open the "Civic" scene.
 - 2: Select the "Alerts" GameObject.
 - 3: On that GameObject is the AlertReciever script, you can change: Max Distance, Check Interval (seconds), Location (Longitude, Latitude) and direction.
-- 4: Click play! You can see ALL alerts with their subtype within the "CurrentAlerts" array.
+- 4: Click play! You can see ALL Waze alerts with their subtype within the "CurrentAlerts" array.
 
 Keep in mind that you can rotate the camera by dragging the screen, this will change the offset direction that the arrow will point at if there is an Alert.
 
